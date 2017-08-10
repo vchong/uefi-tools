@@ -124,6 +124,12 @@ function do_build
 			eval ${PLATFORM_PREBUILD_CMDS}
 		fi
 
+		echo "NUM_THREADS: ${NUM_THREADS}"
+		echo "PLATFORM_ARCH: ${PLATFORM_ARCH}"
+		echo "TOOLCHAIN: ${TOOLCHAIN}"
+		echo "COMPONENT_INF: ${COMPONENT_INF}"
+		echo "target: ${target}"
+		echo "PLATFORM_BUILDFLAGS: ${PLATFORM_BUILDFLAGS}"
 		if [ -n "$COMPONENT_INF" ]; then
 			# Build a standalone component
 			build -n $NUM_THREADS -a "$PLATFORM_ARCH" -t ${TOOLCHAIN} -p "$PLATFORM_DSC" \
